@@ -1,0 +1,22 @@
+.categoriesContainer{
+    margin: 100px auto;
+    text-align: center;
+}
+.categoriyButton{
+    background-color: #fff;
+    color:#000;
+    margin: 0px 25px;
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    border: 1px solid #f3f3f3;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 500;
+    padding: 7px 50px;
+    letter-spacing: 0.7px;
+}
+.categoriyButton:hover,.categoriyButton:focus{
+    background-color: #000;
+    color:#fff;
+    transition: all 0.4s;
+}

@@ -1,0 +1,56 @@
+
+.navContainer{
+    display: flex;
+    align-items: center;
+}
+.navContainer a{
+    text-decoration: none;
+    margin: 0px 15px;
+    color:black;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+.navContainer img{
+    width:62px;
+    height:50px;
+}
+.navContainer a:hover{
+    color:#d14031;
+    transform: all .3s;
+}
+.cartContainer{
+    display: flex;
+    align-items: center;
+}
+.cartIcon{
+    position: relative;
+    cursor: pointer;
+}
+
+.cart, .icon{
+    cursor: pointer;
+}
+.cart:hover, .icon:hover{
+    color:#d14031;
+}
+
+.itemsCount{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d14031;
+    color:white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left:15px;
+    font-size: 10px;
+
+}
+.price{
+    font-size: 13px;
+}
+

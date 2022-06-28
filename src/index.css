@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  color: #000;
+
+}
+.swiper-button-next, .swiper-button-prev{
+  margin:20px;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  color: #000;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  color: #000;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  color: #000;
+}
+.swiper-pagination-bullet ,.swiper-pagination-bullet-active{
+  background-color: #000 !important;
 }
