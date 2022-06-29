@@ -1,7 +1,10 @@
 import {Nav} from "react-bootstrap";
 import { NavLink} from "react-router-dom";
 import styleClasses from './NavBar.module.css'
+import CounterContext from "../Context/CreateContext";
+import {useContext} from "react";
 function NavBar() {
+    let {cartCount,price} = useContext(CounterContext);
     return (
         <div className={'d-flex justify-content-between  py-4'}>
             <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
@@ -25,9 +28,9 @@ function NavBar() {
             <div className={`${styleClasses.cartContainer} me-5`}>
                 <div className={ `${styleClasses.cart}`}>
                     <i className={`fa-solid fa-bag-shopping fs-3 ${styleClasses.cartIcon} ${styleClasses.icon}`}>
-                        <span className={`${styleClasses.itemsCount}`}>0</span>
+                        <span className={`${styleClasses.itemsCount}`}>{cartCount}</span>
                     </i>
-                <span className={`${styleClasses.price} ms-2`}>$ 0.00</span>
+                <span className={`${styleClasses.price} ms-2`}>$ {price.toString()+'.00'}</span>
                 </div>
                 <span className={`m-3`}>|</span>
                 <i className={`fa-solid fa-magnifying-glass fs-5 ${styleClasses.icon}`}></i>

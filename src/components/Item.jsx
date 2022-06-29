@@ -1,7 +1,9 @@
 import classes from "./Item.module.css"
-import {useState} from "react";
+import {useContext, useState} from "react";
+import CounterContext from "../Context/CreateContext";
 import {NavLink} from "react-router-dom";
 function Item(props){
+    let {increase} = useContext(CounterContext);
     const [viewBasket,setViewBasket] = useState(false);
     let handleAddToBasket = (e)=>{
         setViewBasket(true);
@@ -9,9 +11,10 @@ function Item(props){
         let items = localStorage.getItem("items");
         // if item not found initialize it with empty array
         // if founded parse it as json object
-        items = items? JSON.stringify(items) : [];
+        items = items? JSON.parse(items) : [];
         // if the item in the basket add the quantity with 1
         // else add it with quantity = 1
+        console.log(items);
         let itemInBasket = false;
         for(let item of items)
             if(item.id == props.id){
@@ -22,6 +25,8 @@ function Item(props){
         if(!itemInBasket) items.push({id:props.id , quantity:1});
         // stringify the items array and add it in the local storage
         localStorage.setItem("items",JSON.stringify(items));
+
+        increase(1, props.price);
     }
     let handleViewBasket= ()=>{
         console.log('View basket');
