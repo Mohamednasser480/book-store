@@ -7,19 +7,19 @@
     align-items: center;
 
 }
-h2{
+.slider__header{
     color:#555555;
     line-height: 28px;
     font-size: 13px !important;
     letter-spacing: 4px;
     text-transform: uppercase;
 }
-h1{
+.slider__subheader{
     font-family: "Cormorant Garamond", sans-serif;
     font-size: 60px !important;
     text-transform: capitalize;
 }
-p{
+.slider__p{
     font-family: "Cormorant Garamond", sans-serif;
     font-size: 19px;
     line-height: 28px;

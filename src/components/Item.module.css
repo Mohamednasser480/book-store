@@ -1,0 +1,40 @@
+.book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /*height: 500px;*/
+    /*text-align: start;*/
+}
+.item__author{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 4.2px;
+    color:#999;
+    text-transform: uppercase;
+    line-height: 18px;
+    margin-top:15px;
+}
+.item__bookName{
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 21px;
+    letter-spacing: 0.21px;
+    color:#000;
+    text-transform: capitalize;
+    line-height: 24.99px;
+    max-width: 80%;
+    max-height: 75px;
+    overflow: hidden;
+}
+.item__price{
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 19px;
+    line-height: 19px;
+    letter-spacing: normal;
+    color:#343434;
+
+}
+.book__img{
+    width: 80%;
+    height: 400px;
+}

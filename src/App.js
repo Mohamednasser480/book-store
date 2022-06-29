@@ -8,7 +8,6 @@ import Contact from "./components/Contact"
 import Error from "./components/Error"
 import NavBar from "./components/NavBar";
 import Slider from "./components/Slider"
-import Categories from "./components/Categories";
 
 // Import style file
 
