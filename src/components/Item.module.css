@@ -39,9 +39,9 @@
 .shadow__textUnderLine{
     position: absolute;
     background-color: #fff;
-    height: 2px;
+    height: 1px;
     width: 0px;
-    buttom:3px;
+    buttom:2px;
     right:100%;
 }
 .shadow__text:hover .shadow__textUnderLine{

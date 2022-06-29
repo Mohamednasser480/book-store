@@ -7,7 +7,9 @@ import Event from "./components/Event"
 import Contact from "./components/Contact"
 import Error from "./components/Error"
 import NavBar from "./components/NavBar";
-import Details from "./components/Details";
+import Cart from "./components/Cart"
+// import Details from "./components/Details";
+
 // Import style file
 
 
@@ -21,7 +23,8 @@ function App() {
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path="/event" element={<Event/>}></Route>
                 <Route path="/contact" element={<Contact/>}></Route>
-                <Route path="/details/:id" element={<Details/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                {/*<Route path="/details/:id" element={<Details/>}/>*/}
                 <Route path="/*" element={<Error/>}></Route>
           </Routes>
       </>
