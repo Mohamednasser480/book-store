@@ -8,11 +8,12 @@ function Items(){
         <div className={`d-flex justify-content-center flex-wrap ms-5`}>
             {
         books.map( (book)=> {
-            return <Item className={`col-3 p-1`}
+            return <Item className={`col-3`}
                 title={book.title}
                 img={book.img}
                 author={book.author}
                 price= {book.price}
+                id={book.id}
             />
         })
         }

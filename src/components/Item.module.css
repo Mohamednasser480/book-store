@@ -3,8 +3,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    /*height: 500px;*/
-    /*text-align: start;*/
+    position: relative;
+}
+.book:hover .book__shadow{
+    top: 0;
+    opacity: 0.95;
+    transition: all 0.5s;
+}
+.book__shadow{
+    background-color: #d14031;
+    height: 400px;
+    width: 80%;
+    position: absolute;
+    top:100%;
+    left:0px;
+}
+.shadow__textContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+.shadow__text{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 12px;
+    line-height: 34px;
+    letter-spacing: 4.2px;
+    color:white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+    position: relative;
+}
+.shadow__textUnderLine{
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    width: 0px;
+    buttom:3px;
+    right:100%;
+}
+.shadow__text:hover .shadow__textUnderLine{
+    right:0px;
+    transition: all 0.7s;
+    width:100%;
 }
 .item__author{
     font-family: "Josefin Sans", sans-serif;
@@ -25,6 +68,7 @@
     max-width: 80%;
     max-height: 75px;
     overflow: hidden;
+
 }
 .item__price{
     font-family: "Cormorant Garamond", sans-serif;
