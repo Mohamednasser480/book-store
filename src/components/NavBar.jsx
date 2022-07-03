@@ -30,7 +30,7 @@ function NavBar() {
                     <i className={`fa-solid fa-bag-shopping fs-3 ${styleClasses.cartIcon} ${styleClasses.icon}`}>
                         <span className={`${styleClasses.itemsCount}`}>{cartCount}</span>
                     </i>
-                <span className={`${styleClasses.price} ms-2`}>$ {price.toString()+'.00'}</span>
+                <span className={`${styleClasses.price} ms-2`}>$ {price.toString() + '.00'}</span>
                 </div>
                 <span className={`m-3`}>|</span>
                 <i className={`fa-solid fa-magnifying-glass fs-5 ${styleClasses.icon}`}></i>

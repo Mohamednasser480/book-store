@@ -1,0 +1,20 @@
+.buttonContainer{
+ border: 1px solid #e1e1e1;
+ color:#999;
+ font-size: 14px;
+ padding: 10px 12px;
+ max-width: 100px;
+ display: flex;
+justify-content: space-between;
+ align-items: center;
+}
+.buttonIcon{
+ padding:0px 5px;
+ cursor: pointer;
+}
+.quantity{
+ padding: 0px 10px;
+ color:#555;
+ font-size: 17px;
+ font-family: "Cormorant Garamond",sans-serif;
+}

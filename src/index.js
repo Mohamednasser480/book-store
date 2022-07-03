@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 import "@fortawesome/fontawesome-free/css/all.min.css"
-// npm i @fortawesom/fontawesome-free
+import CartContextProvider from "./Context/CartContextProvider";
 import "bootstrap/dist/css/bootstrap.min.css"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <BrowserRouter>
+          <CartContextProvider>
             <App />
+          </CartContextProvider>
       </BrowserRouter>
   </React.StrictMode>
 );
