@@ -28,18 +28,18 @@ function CartContextProvider(props){
         setCartCount(numberOfIntance);
         setPrice(totalPrice);
     },[])
-    let increase = (book) => {
+    let increase = (book,numOfInstance=1) => {
         const itemIndex = cartItems.findIndex((item)=>item.id === book.id);
         const newCart = [...cartItems];
         if(itemIndex === -1){
-            book.quantity = 1;
+            book.quantity = numOfInstance;
             newCart.push(book);
-        }else{
-            newCart[itemIndex].quantity++;
-        }
+        }else
+            newCart[itemIndex].quantity+=numOfInstance;
+
         setCartItems(newCart);
-        setCartCount((cartCount)=>cartCount + 1)
-        setPrice((price)=> price + +book.price);
+        setCartCount((cartCount)=>cartCount + numOfInstance)
+        setPrice((price)=> price + (+book.price * numOfInstance));
     }
 
 

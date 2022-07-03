@@ -3,21 +3,25 @@ import CartItem from "./CartItem";
 import CounterContext from "../Context/CreateContext";
 import {useContext} from "react";
 import EmptyCart from "./EmptyCart";
+import BasketSummary from "./BasketSummary";
 function Cart(){
     let {cartItems} = useContext(CounterContext);
     return(
         <>
          <Title subtitle='cart'/>
          { (cartItems.length)?
-             cartItems.map(
-             item => <CartItem
-                title = {item.title}
-                price = {item.price}
-                quantity={item.quantity}
-                img={item.img}
-                id={item.id}
-             />)
-
+                 <div>
+                     {cartItems.map(
+                     item => <CartItem
+                         title={item.title}
+                         price={item.price}
+                         quantity={item.quantity}
+                         img={item.img}
+                         id={item.id}
+                         author={item.author}
+                     />)}
+                     <BasketSummary/>
+                 </div>
             :<EmptyCart/>
          }
         </>

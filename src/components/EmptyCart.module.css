@@ -1,0 +1,9 @@
+.wrapper{
+    border: 1px solid #e1e1e1;
+    padding: 30px 0px;
+    margin: 80px 0px 50px;
+    text-align: center;
+    font-size: 25px;
+    color:#000;
+    font-family: "Cormorant Garamond",sans-serif;
+}

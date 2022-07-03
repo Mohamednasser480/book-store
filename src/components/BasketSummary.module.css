@@ -1,0 +1,33 @@
+.summary{
+    margin-top: 50px;
+    font-family: "Cormorant Garamond",sans-serif;
+}
+.summary__input{
+    border:1px solid #999;
+    padding: 12px 22px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color:#999;
+    text-transform: capitalize;
+    margin-right:20px;
+}
+.summary__input:focus{
+    outline: none;
+}
+.summary__section{
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px 0px;
+}
+.summary__section p{
+    color:#555;
+    font-size: 19px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.summary__section h3{
+    font-size: 25px;
+    margin-bottom: 0px;
+}

@@ -11,6 +11,8 @@ import Error from "./components/Error"
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart"
 import {setItems} from "./helper/localStorageHandler";
+import Footer from "./components/Footer";
+import Details from "./components/Details";
 // Import style file
 let initial = true;
 function App() {
@@ -32,9 +34,10 @@ function App() {
             <Route path="/event" element={<Event/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="/cart" element={<Cart/>}/>
-            {/*<Route path="/details/:id" element={<Details/>}/>*/}
+            <Route path="/details/:book" element={<Details/>}/>
             <Route path="/*" element={<Error/>}></Route>
           </Routes>
+          <Footer/>
       </>
   );
 }

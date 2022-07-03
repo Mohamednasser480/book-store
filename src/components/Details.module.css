@@ -1,12 +1,25 @@
 .Details__container{
     display: flex;
-    height: 300px;
     margin-top:70px ;
+    margin-left: 120px;
+}
+.messageContainer{
+    border:1px solid #e1e1e1;
+    padding: 20px 30px;
+    margin: 80px 0px 30px 120px;
+    font-family:  "Cormorant Garamond",sans-serif;
+    color:#555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+}
+.messageContainer p{
+    margin-bottom: 0px;
 }
 .Details__left img{
     height: 600px;
     width: 75%;
-    margin-left: 120px;
 }
 
 .Details__author{
@@ -26,7 +39,9 @@
 }
 .Details__price{
     color:#000;
-    padding: 20px 0px ;
+    padding: 10px 0px;
+    font-family: "Cormorant Garamond",sans-serif;
+    font-size: 30px;
 }
 .Details__description{
     font-size: 19px;

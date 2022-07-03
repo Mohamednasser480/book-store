@@ -8,7 +8,6 @@ function QuantityButton (props){
             decrease(props.book);
     }
     const handleIncreaseICon =()=> increase(props.book);
-
     return (
         <div className={classes.buttonContainer}>
             <i className={`${classes.buttonIcon} fa-solid fa-angle-left`} onClick={handleDecreaseICon}></i>

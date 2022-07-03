@@ -69,6 +69,10 @@
     max-width: 80%;
     max-height: 75px;
     overflow: hidden;
+    text-decoration: none;
+}
+.item__bookName:hover{
+    color:#d14031;
 
 }
 .item__price{
