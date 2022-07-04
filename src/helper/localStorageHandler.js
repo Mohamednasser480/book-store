@@ -4,7 +4,6 @@ const getItems = ()=>{
     items = items || [];
     return JSON.parse(items);
 }
-
 export {
     setItems,
     getItems

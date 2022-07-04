@@ -6,6 +6,7 @@ function CartContextProvider(props){
     const [cartCount, setCartCount] = useState(0);
     const [price, setPrice] = useState(0);
     const [cartItems,setCartItems] = useState([]);
+    // id qunatity
     useEffect(()=>{
         // map cart item To product Item to get all product information
         const cardItemsInfo=[];
