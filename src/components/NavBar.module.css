@@ -17,7 +17,7 @@
 }
 .navContainer a:hover{
     color:#d14031;
-    transform: all .3s;
+    transform: all 0.3s;
 }
 .cartContainer{
     display: flex;
@@ -25,12 +25,13 @@
 }
 .cartIcon{
     position: relative;
-    cursor: pointer;
 }
 
 .cart, .icon{
     cursor: pointer;
+    color: #282828;
 }
+
 .cart:hover, .icon:hover{
     color:#d14031;
 }

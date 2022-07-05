@@ -1,5 +1,5 @@
 import {Nav} from "react-bootstrap";
-import { NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import styleClasses from './NavBar.module.css'
 import CounterContext from "../Context/CreateContext";
 import {useContext} from "react";
@@ -26,12 +26,13 @@ function NavBar() {
                 </Nav.Item>
             </Nav>
             <div className={`${styleClasses.cartContainer} me-5`}>
-                <div className={ `${styleClasses.cart}`}>
-                    <i className={`fa-solid fa-bag-shopping fs-3 ${styleClasses.cartIcon} ${styleClasses.icon}`}>
+                <Link className={`text-decoration-none`}to={'/cart'}><div className={ `${styleClasses.cart}`}>
+                  <i className={`fa-solid fa-bag-shopping fs-3 ${styleClasses.cartIcon} ${styleClasses.icon}`}>
+
                         <span className={`${styleClasses.itemsCount}`}>{cartCount}</span>
                     </i>
                 <span className={`${styleClasses.price} ms-2`}>$ {price.toString() + '.00'}</span>
-                </div>
+                </div></Link>
                 <span className={`m-3`}>|</span>
                 <i className={`fa-solid fa-magnifying-glass fs-5 ${styleClasses.icon}`}></i>
                 <span className={`m-3`}>|</span>

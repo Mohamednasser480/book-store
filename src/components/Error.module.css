@@ -1,0 +1,31 @@
+.error{
+    background-image: url(https://chapterone.qodeinteractive.com/wp-content/uploads/2019/07/404-img-1.jpg);
+    background-position: center center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cormorant Garamond",sans-serif;
+}
+.error h1, .error h3{
+    font-size: 50px;
+    letter-spacing: 0.2em;
+}
+.error h3{
+    letter-spacing: 0.1em;
+}
+.error p{
+    margin: 15px 0px 40px;
+    font-size: 20px;
+}
+.error__button{
+    background-color: #fff;
+    border: 1px solid #858483;
+    color: black;
+}
+.error__button:hover{
+    background-color:#363636;
+    color: #e1e1e1;
+    transition: all 0.4s;
+}
