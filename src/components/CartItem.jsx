@@ -13,25 +13,26 @@ function CartItem(props){
         title:props.title,
         quantity: props.quantity
     };
-
-    // to change the total price from the child component
-    // operation = {1 ,-1}
-    // 1 if increase -1 if Decrease
-    console.log('author = ', bookObj.author);
     const handleRemoveItem = ()=> removeItem(bookObj);
     return (
         <div className={`container-md ${classes.dataRow}`}>
             <i className={`${classes.removeIcon} fa-solid fa-xmark col-1`} onClick={handleRemoveItem}></i>
-            <img className={`${classes.row__img} `} src={require(`../images${props.img}`)}/>
-
-            <Link className={`${classes.row__title} col-xl-4 col-md-3 `} to={`/details/${bookObj}`} state = {bookObj}>
+            {
+                props.img.includes('google') ? <img className={`${classes.row__img} `} src={props.img}/> :
+                    <img className={`${classes.row__img} `} src={require(`../images${props.img}`)}/>
+            }
+            { props.img.includes('google')?
+                <Link className={`${classes.row__title} col-xl-4 col-md-3 `} to={`/apiSearch/${bookObj.id}`} state = {bookObj}>
+                    <a >{props.title}</a>
+                </Link>:
+            <Link className={`${classes.row__title} col-xl-4 col-md-3 `} to={`/details/${bookObj.id}`} state = {bookObj}>
                 <a >{props.title}</a>
-            </Link>
-            <p className={`${classes.row_price}`}>${+props.price.toString()+'.00'}</p>
+            </Link>}
+            <p className={`${classes.row_price}`}>${Number.parseFloat(props.price).toFixed(2)}</p>
             <div className={`col-xl-1 col-md-2 m-auto`}>
                 <QuantityButton book={bookObj}/>
             </div>
-            <span className={`${classes.row_price}`}>${(props.quantity * props.price).toString() + '.00'}</span>
+            <span className={`${classes.row_price}`}>${Number.parseFloat(+props.quantity * +props.price).toFixed(2)}</span>
         </div>
     )
 }

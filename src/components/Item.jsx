@@ -44,12 +44,12 @@ function Item(props){
                 </div>
 
             <h4 className={classes.item__author}>{props.author}</h4>
-            <Link className={classes.item__bookName} to={`/details/${bookObj}`}
+            <Link className={classes.item__bookName} to={`/details/${bookObj.id}`}
                   state = {bookObj}
             >
                 <p >{props.title}</p>
             </Link>
-            <p className={classes.item__price}>${props.price}</p>
+            <p className={classes.item__price}>${Number.parseFloat(props.price).toFixed(2)}</p>
 
 
         </div>

@@ -30,7 +30,6 @@ function Items(){
                                  author={book.author}
                                  price={book.price}
                                  id={book.id}
-
                     />
                 })}
             </div>

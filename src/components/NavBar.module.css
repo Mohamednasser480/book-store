@@ -52,3 +52,39 @@
     color:#282828 !important;
     border: #555555 !important;
 }
+
+.container{
+    background-color: #282828;
+    color:#FFF;
+    padding: 17px 40px 28px;
+    font-size: 15px;
+    position: absolute;
+    top:65px;
+    right:10px;
+    z-index: 5;
+}
+.search{
+    border-bottom: 1px solid #999999;
+    width:250px;
+}
+.search input{
+    letter-spacing: 2.5px;
+    background-color: #282828;
+    outline: none;
+    border: none;
+    padding: 6px 0px 6px 6px;
+}
+.go{
+    letter-spacing: 5px;
+    color: #fff ;
+    text-decoration: none ;
+}
+.go:hover{
+    color: #fff ;
+}
+.search input:focus{
+    color:#fff;
+}
+.search input:focus::placeholder{
+    color:#fff;
+}

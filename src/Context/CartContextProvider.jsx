@@ -44,7 +44,6 @@ function CartContextProvider(props){
         setPrice((price)=> price + (+book.price * numOfInstance));
     }
 
-
     let decrease = (book)=>{
         const indexToDelete = cartItems.findIndex(item=>item.id === book.id);
         const newItems = [...cartItems];

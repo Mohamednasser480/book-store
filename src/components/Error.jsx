@@ -10,6 +10,7 @@ function Error () {
         <p>Oops! The page you are looking for does not exist. It might have been moved or deleted.</p>
         <Link to={'/home'}> <Button className={`${classes.error__button}`}>go to home</Button>
         </Link>
+
     </div>)
 }
 export default Error;

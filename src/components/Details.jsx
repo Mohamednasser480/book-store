@@ -29,7 +29,7 @@ function Details(){
         <>
             <Title title="product" subtitle="shop list"></Title>
             {(isAddedItem-- > 0)?
-            <div className={`col-10 ${classes.messageContainer}`}>
+            <div className={`${classes.messageContainer}`}>
                 <p>{` ${q}x "${title}" have been added to your basket.`}</p>
                 <Link to={'/cart'}>
                     <Button>view basket</Button>
@@ -43,7 +43,7 @@ function Details(){
                 <div className={`m-auto m-lg-0 col-10 col-lg-7`}>
                     <p className={`${classes.Details__author}`}>by {book.author}</p>
                     <p className={`${classes.Details__title}`}>{book.title}</p>
-                    <p className={`${classes.Details__price}`}>${book.price}</p>
+                    <p className={`${classes.Details__price}`}>${Number.parseFloat(book.price).toFixed(2)}</p>
                     <p className={`${classes.Details__description}`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem culpa dolorem doloremque earum est exercitationem itaque libero maxime minima modi mollitia nemo nulla officia omnis quas qui quibusdam sapiente sed sit tempore, ut vitae. At, cum debitis eius eos facere in iure labore nam natus nulla officiis provident? Neque.</p>
                     <div className={` d-flex flex-column flex-md-row col-7 col-md-12 pt-3`}>
                         <div className={` ${quantityBtnClasses.buttonContainer} mb-4 me-md-4`}>
