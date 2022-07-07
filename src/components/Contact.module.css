@@ -26,10 +26,16 @@
 }
 .contact__imgContainer img{
     cursor: pointer;
+    width:12%
 }
 .contact__imgContainer img:hover{
     position: relative;
-    /*top:-20px;*/
     transform: translateY(-10px);
     transition: all 0.8s;
+}
+
+@media screen and (max-width:500px){
+    .contact__imgContainer img{
+        display: none;
+    }
 }

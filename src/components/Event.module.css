@@ -57,3 +57,41 @@
     padding: 30px;
     align-items: center;
 }
+.eventRecord__data{
+    display: flex;
+}
+@media screen and (max-width: 425px) {
+    .event__subheader{
+        font-size: 30px;
+    }
+    .event__main p{
+        font-size: 16px;
+    }
+    .event__main{
+        width:80%;
+    }
+    .event__header{
+        font-size: 10px;
+        width: 100%;
+        letter-spacing: 0.4em;
+    }
+        .event__title{
+            font-size: 24px;
+        }
+}
+
+@media screen and (max-width: 768px) {
+
+    .eventContainer p{
+        display: none;
+    }
+    .eventContainer{
+        display: block;
+        text-align: center;
+    }
+    .eventRecord__data{
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}

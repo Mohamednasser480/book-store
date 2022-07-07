@@ -18,3 +18,18 @@ justify-content: space-between;
  font-family: "Cormorant Garamond",sans-serif;
  letter-spacing: 4px;
 }
+@media screen and (max-width: 420px) {
+ .buttonContainer{
+  padding: 0px 12px;
+  border: none;
+  margin: 0px 10px;
+
+ }
+   .buttonIcon{
+    padding:0px 2px;
+   }
+ .quantity{
+  padding:0px 2px;
+  font-size: 16px;
+ }
+}

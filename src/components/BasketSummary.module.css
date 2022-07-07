@@ -31,3 +31,12 @@
     font-size: 25px;
     margin-bottom: 0px;
 }
+@media screen and (max-width: 425px) {
+    .summary__input{
+        padding: 5px 20px;
+        font-size: 11px;
+        line-height: 30px;
+        letter-spacing: 3px;
+        display: block;
+    }
+}

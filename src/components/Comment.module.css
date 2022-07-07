@@ -39,3 +39,15 @@
 .actions:hover{
     color: #d14031;
 }
+.comment img{
+    border-radius: 50%;
+}
+@media screen and (max-width: 425px){
+    .comment{
+        flex-direction: column;
+    }
+    .replyto{
+        font-size: 16px;
+    }
+}
+

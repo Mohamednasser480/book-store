@@ -2,7 +2,7 @@ import classes from './Slider.module.css'
 import Button from '../UI/Button'
 function Slider1(){
     return <>
-        <div className={` container px-4  ${classes.sliderContainer}`}>
+        <div className={` container px-4  ${classes.sliderContainer} ${classes.slider1}`}>
         <div className={classes.left}>
             <h2 className={classes.slider__header}>it's chapterone</h2>
             <h1 className={ classes.slider__subheader}>we love literature</h1>

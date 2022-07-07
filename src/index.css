@@ -15,7 +15,6 @@ code {
 
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
   color: #000;
-
 }
 .swiper-button-next, .swiper-button-prev{
   margin:20px;
@@ -23,12 +22,13 @@ code {
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
   color: #000;
 }
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
-  color: #000;
-}
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-  color: #000;
-}
+
 .swiper-pagination-bullet ,.swiper-pagination-bullet-active{
   background-color: #000 !important;
+}
+
+@media screen and (max-width:768px){
+  .swiper-button-next, .swiper-button-prev{
+    display: none !important;
+  }
 }

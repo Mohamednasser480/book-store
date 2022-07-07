@@ -3,20 +3,29 @@
     text-align: center;
 }
 .categoriyButton{
-    background-color: #fff;
-    color:#000;
-    margin: 0px 25px;
+    background-color: #fff !important;
+    color:#000 !important;
+    margin: 15px 25px;
     font-size: 18px;
     text-transform: capitalize;
     letter-spacing: normal;
-    border: 1px solid #f3f3f3;
-    font-family: "Cormorant Garamond", sans-serif;
+    border: 1px solid #f3f3f3 !important;
+    font-family: "Cormorant Garamond", sans-serif !important;
     font-weight: 500;
     padding: 7px 40px;
     letter-spacing: 0.7px;
 }
-.categoriyButton:hover,.categoriyButton:focus{
-    background-color: #000;
-    color:#fff;
+.categoriyButton:hover{
+    background-color: #000 !important;
+    color:#fff !important;
     transition: all 0.4s;
+}
+
+@media screen and (max-width:786px ){
+    .categoriesContainer{
+        margin-top: 80px;
+    }
+    .categoriyButton{
+        padding: 5px 25px;
+    }
 }

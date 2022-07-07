@@ -2,12 +2,10 @@
     color:white;
     background-color: #282828;
     display: flex;
-    padding: 75px 100px;
+    padding: 75px 0px;
     font-family: "Cormorant Garamond",sans-serif;;
     font-weight: 400;
     margin-top:100px;
-
-
 }
 .footerContainer a , .footerContainer p{
     color:#c4c4c4 !important;
@@ -69,3 +67,16 @@
     font-weight: 500;
 }
 
+@media screen and (max-width:425px ){
+ .footer__header{
+     font-size: 20px;
+     padding-bottom:0px;
+ }
+    .footer__emailContainer{
+        width:80%;
+    }
+    .footer_imgContainer img{
+        margin:3px;
+    }
+
+}

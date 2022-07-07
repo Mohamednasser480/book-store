@@ -3,21 +3,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+.imgContainer{
     position: relative;
     overflow: hidden;
 }
-.book:hover .book__shadow{
-    top: 0;
+.imgContainer:hover .book__shadow{
     opacity: 0.95;
-    transition: all 0.5s;
+    transition: all 0.4s;
+    display: block;
 }
 .book__shadow{
     background-color: #d14031;
     height: 400px;
-    width: 80%;
+    width: 100%;
+    opacity: 0;
     position: absolute;
-    top:100%;
-    left:0px;
+    top:0px;
 }
 .shadow__textContainer{
     display: flex;
@@ -73,7 +75,6 @@
 }
 .item__bookName:hover{
     color:#d14031;
-
 }
 .item__price{
     font-family: "Cormorant Garamond", sans-serif;
@@ -84,6 +85,23 @@
 
 }
 .book__img{
-    width: 80%;
+    width: 100%;
     height: 400px;
 }
+@media screen and (max-width:425px ) {
+    .book__img , .book__shadow{
+        height: 300px;
+    }
+    .item__bookName{
+        font-size:20px;
+    }
+    .book{
+        width: 80%;
+        text-align: center;
+        margin:auto ;
+    }
+    .book >*{
+        text-align: left;
+    }
+}
+@m

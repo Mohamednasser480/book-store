@@ -8,10 +8,10 @@ const Comment = (props) => {
     const  handleHideForm =()=> setDisplayForm(false);
     return (
         <div className={`${classes.comment}`}>
-            <div className={`col-2`}>
+            <div className={`col-md-3 col-xl-2 mb-4`}>
                 <img src={props.img}/>
             </div>
-            <div className={`col-8`}>
+            <div className={`col-md-8`}>
                 <span className={ `${classes.blog__qoute} pe-2`}>{props.commentedBy}</span>
                 <span className={`${blogClasses.blog__info} fs-6`}>{props.date}</span>
                 <p className={`${classes.blog_body} mt-3`}>{props.body}</p>
@@ -25,7 +25,6 @@ const Comment = (props) => {
                                     </div>
                                 :  <a className={`${classes.replyBtn}`} onClick={handleShowFormComment}>reply</a>
                 }
-
             </div>
         </div>
     );

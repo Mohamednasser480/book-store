@@ -1,6 +1,6 @@
 import './App.module.css';
 import {Routes,Route} from 'react-router-dom'
-import CounterContext from "./Context/CreateContext";
+import {CartContext} from "./Context/CreateContext";
 import {useContext, useEffect} from "react";
 // Import components
 import Home from "./components/Home"
@@ -16,7 +16,7 @@ import Details from "./components/Details";
 // Import style file
 let initial = true;
 function App() {
-    let {cartItems} = useContext(CounterContext);
+    let {cartItems} = useContext(CartContext );
 
     useEffect(()=>{
          if(cartItems.length !== 0 || (cartItems.length === 0 && !initial)) {
@@ -28,9 +28,9 @@ function App() {
       <>
           <NavBar/>
           <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/home" element={<Home/>}/>
-            <Route path="/blog" element={<Blog/>}/>
+              <Route path="/" element={<Home/>}/>
+             <Route path="/home" element={<Home/>}/>
+             <Route path="/blog" element={<Blog/>}/>
             <Route path="/event" element={<Event/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="/cart" element={<Cart/>}/>

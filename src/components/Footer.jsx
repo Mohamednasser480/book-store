@@ -4,7 +4,9 @@ const Footer = () => {
     return (
         <div>
             <div className={`${classes.footerContainer}`}>
-                <div className={`col-3 p-2`}>
+                <div className={` container `}>
+            <div className={`row`}>
+                <div className={`col-lg-3 col-md-6 col-sm-12 px-md-2 px-sm-3 py-3`}>
                     <h3 className={`${classes.footer__header}`}>Publishers</h3>
                     <a>bestsellers</a><br/>
                     <a>interviews</a><br/>
@@ -12,7 +14,7 @@ const Footer = () => {
                     <a>book fairs</a><br/>
                     <a>help (FAQ)</a><br/>
                 </div>
-                <div className={`col-3 p-2`}>
+                <div className={`col-lg-3 col-md-6 col-sm-12 px-md-2 px-sm-3  py-3`}>
                     <h3 className={`${classes.footer__header}`}>Contact</h3>
                     <p>Stay in touch with everything ChapterOne, follow us on social media and learn about new promotions.</p>
                     <div className={`${classes.icon}`}>
@@ -22,7 +24,7 @@ const Footer = () => {
                         <i className="fa-solid fa-basketball"></i>
                     </div>
                 </div>
-                <div className={`col-3 p-2`}>
+                <div className={`col-lg-3 col-md-6 col-sm-12 px-md-2 px-sm-3 py-3`}>
                     <h3 className={`${classes.footer__header}`}>News & Update</h3>
                     <p>We’d love it if you subscribed to our newsletter! You’ll love it too.</p>
 
@@ -31,7 +33,7 @@ const Footer = () => {
                         <i className="fa-solid fa-paper-plane"></i>
                     </div>
                 </div>
-                <div className={`col-3 p-2`}>
+                <div className={`col-lg-3 col-md-6 col-sm-12 px-md-2 px-sm-3 py-3`}>
                     <h3 className={`${classes.footer__header}`}>Social media</h3>
                     <div className={`${classes.footer_imgContainer}`}>
                         <img src={'https://scontent-atl3-2.cdninstagram.com/v/t51.2885-15/64597150_2522195441202926_2456027307595973840_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=o7YjXOYIEZ4AX8qeHmj&_nc_ht=scontent-atl3-2.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT-3Uk509zOqD9q1tNXGYDsBl5wGCSN8x9gm4J7QofmcAw&oe=62C246CA'}/>
@@ -42,6 +44,8 @@ const Footer = () => {
                         <img src={'https://scontent-atl3-2.cdninstagram.com/v/t51.2885-15/66675239_2284760738443349_6629740624649938864_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=Ao_tUculPy0AX_Fj2fD&_nc_ht=scontent-atl3-2.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT_-hwoN1L0UcMHWC4ssGf69MsoPYJy65j-_xTyWTYuw6Q&oe=62C2007A'}/>
 
                     </div>
+                </div>
+            </div>
                 </div>
             </div>
             <p className={classes.footer__text}>© 2019 qode interactive, all rights reserved</p>

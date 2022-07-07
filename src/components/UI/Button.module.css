@@ -9,3 +9,16 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+.isActive{
+    background-color: #000 !important;
+    color:#fff !important;
+    transition: all 0.4s;
+}
+@media screen and (max-width: 425px) {
+    .Button {
+        padding: 5px 20px;
+        font-size: 11px;
+        line-height: 30px;
+        letter-spacing: 3px;
+    }
+}

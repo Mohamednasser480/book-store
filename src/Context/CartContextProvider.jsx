@@ -1,12 +1,13 @@
-import CounterContext from "./CreateContext";
+import {CartContext}  from "./CreateContext";
 import {useEffect, useState} from "react";
 import {getItems} from '../helper/localStorageHandler';
 import data from "../data"
+import commentsData from "../comments";
 function CartContextProvider(props){
     const [cartCount, setCartCount] = useState(0);
     const [price, setPrice] = useState(0);
     const [cartItems,setCartItems] = useState([]);
-    // id qunatity
+    const [comments,setComments] = useState(commentsData);
     useEffect(()=>{
         // map cart item To product Item to get all product information
         const cardItemsInfo=[];
@@ -62,10 +63,22 @@ function CartContextProvider(props){
         setPrice((price)=> price - (book.price * book.quantity));
         setCartItems(newItems);
     }
+    const addComment = (comment)=> {
+        comment.img='https://secure.gravatar.com/avatar/add8d2cc0aacaebcc8637f639d0a9d00?s=96&d=mm&r=g';
+        const d = new Date();
+        const year = d.getFullYear();
+        const day = d.getDate();
+        console.log(d,day);
+        const month = d.toLocaleString('en-US', { month: 'long' });
+        //  JULY 29, 2019
+        comment.date = `${month} ${day}, ${year}`;
+        setComments(prv => [...prv, comment]);
+    }
+    const getComments = ()=> comments;
     return (
-        <CounterContext.Provider value = { {cartCount,price, increase, decrease, removeItem, cartItems} }>
+        <CartContext.Provider value = { {cartCount,price, increase, decrease, removeItem, cartItems,comments,addComment,getComments} }>
             {props.children}
-        </CounterContext.Provider>
+        </CartContext.Provider>
     )
 
 }

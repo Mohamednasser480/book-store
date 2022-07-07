@@ -1,7 +1,5 @@
 .Details__container{
-    display: flex;
     margin-top:70px ;
-    margin-left: 120px;
 }
 .messageContainer{
     border:1px solid #e1e1e1;
@@ -18,8 +16,8 @@
     margin-bottom: 0px;
 }
 .Details__left img{
-    height: 600px;
-    width: 75%;
+    /*height: 600px;*/
+    width: 100%;
 }
 
 .Details__author{
@@ -49,4 +47,22 @@
     color:#555;
     font-family: "Cormorant Garamond",sans-serif;
     width: 80%;
+}
+@media screen and (max-width: 768px) {
+ .Details__title{
+     font-size: 28px;
+     margin:0px
+   }
+    .Details__description{
+        width:100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .Details__title{
+        font-size: 20px;
+        margin:0px
+    }
+    .Details__description{
+        width:100%;
+    }
 }

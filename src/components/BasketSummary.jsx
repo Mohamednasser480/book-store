@@ -1,13 +1,13 @@
 import React, {useContext} from 'react';
 import Button from "./UI/Button";
 import classes from './BasketSummary.module.css'
-import CounterContext from "../Context/CreateContext";
+import {CartContext}  from "../Context/CreateContext";
 const BasketSummary = () => {
-    const {price} = useContext(CounterContext);
+    const {price} = useContext(CartContext);
     const flatRate = 79;
     return (
-        <div className={`container ${classes.summary} d-flex justify-content-between`}>
-            <div className={`col-5`}>
+        <div className={`container ${classes.summary} d-flex  flex-column flex-lg-row justify-content-between`}>
+            <div className={`col-lg-5`}>
                 <h2>Basket totals</h2>
                 <div className={`${classes.summary__section}`}>
                     <h3 className={`col-8`} >Subtotal</h3>
@@ -27,8 +27,8 @@ const BasketSummary = () => {
                 </div>
                 <Button className={`mt-4`}>proceed to checkout</Button>
             </div>
-             <div>
-                 <input className={`${classes.summary__input}`} type="text" placeholder={'coupon code'}/>
+             <div className={`order-first order-lg-last mb-5`}>
+                 <input className={`${classes.summary__input} mb-4`} type="text" placeholder={'coupon code'}/>
                  <Button>apply coupon</Button>
              </div>
         </div>

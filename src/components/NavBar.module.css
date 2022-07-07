@@ -1,27 +1,23 @@
-
-.navContainer{
-    display: flex;
-    align-items: center;
-}
-.navContainer a{
+.myNav {
     text-decoration: none;
-    margin: 0px 15px;
     color:black;
     text-transform: capitalize;
     font-size: 20px;
     font-family: 'Cormorant Garamond', serif;
 }
-.navContainer img{
-    width:62px;
-    height:50px;
+.logo{
+    width:50% !important;
+    margin-left: 10px;
 }
-.navContainer a:hover{
-    color:#d14031;
-    transform: all 0.3s;
+.navLink{
+    color:#000 !important;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-decoration: none;
 }
-.cartContainer{
-    display: flex;
-    align-items: center;
+.navLink:hover{
+    color: #d14031 !important;
+    transition: 0.2s;
 }
 .cartIcon{
     position: relative;
@@ -31,14 +27,13 @@
     cursor: pointer;
     color: #282828;
 }
-
 .cart:hover, .icon:hover{
     color:#d14031;
 }
 
 .itemsCount{
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,10 +43,12 @@
     position: absolute;
     bottom: 10px;
     left:15px;
-    font-size: 10px;
-
+    font-size: 9px;
 }
 .price{
-    font-size: 13px;
+    font-size: 15px;
 }
-
+.dropIcon{
+    color:#282828 !important;
+    border: #555555 !important;
+}

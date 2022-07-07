@@ -35,7 +35,6 @@ iframe{
     border-bottom: 1px solid #e1e1e1;
     border-top: 1px solid #e1e1e1;
     margin-top: 60px;
-    text-align: center;
 }
 .blog__iconSection >* {
     padding:0px 20px;
@@ -59,5 +58,36 @@ iframe{
     font-size: 25px;
     margin-top: 40px;
     padding-top: 20px;
+}
+@media screen and (max-width: 768px){
+    .blog{
+        margin: 0px 70px;
+    }
+    .blog__info{
+        margin-top: 0px ;
+    }
+    iframe{
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 425px){
+    .blog{
+        margin: 0px 30px;
+    }
+    .blog__info{
+        margin-top: 40px;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+    .blog__title{
+        font-size: 30px;
+    }
+    iframe{
+        height: 33vh;
+    }
+    .blog__author{
+        flex-direction: column;
+        margin-left: 15px;
+    }
 }
 

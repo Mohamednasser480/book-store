@@ -1,11 +1,11 @@
 import Title from "./UI/Title";
 import CartItem from "./CartItem";
-import CounterContext from "../Context/CreateContext";
+import {CartContext}  from "../Context/CreateContext";
 import {useContext} from "react";
 import EmptyCart from "./EmptyCart";
 import BasketSummary from "./BasketSummary";
 function Cart(){
-    let {cartItems} = useContext(CounterContext);
+    let {cartItems} = useContext(CartContext);
     return(
         <>
          <Title subtitle='cart'/>

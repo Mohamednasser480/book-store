@@ -4,10 +4,16 @@
     font-family: "Cormorant Garamond",sans-serif;
     font-weight: 300;
     border: 1px solid #e1e1e1;
+    color:#999999;
 
 }
+.formContainer input:focus{
+    outline: 1px solid #e1e1e1;
+    border: 1px solid #e1e1e1;
+    color:#252525;
+}
 .form__Message{
-    margin:25px 0px;
+    margin-bottom:25px;
     padding: 12px 19px;
     font-weight: 300;
     text-transform: capitalize;
@@ -18,7 +24,16 @@
 }
 .form__Message:focus{
     outline: 1px solid #e1e1e1;
-    font-size: 13px;
-    color: #000;
-    font-family: "Josefin Sans",sans-serif;
+    color:#252525;
+}
+.InvalidMessage{
+    margin-bottom: 12px;
+    font-family: "Cormorant Garamond",sans-serif;
+    color: #c00707;
+    font-size: 20px;
+}
+@media screen  and (max-width: 425px){
+    .submitBtn{
+        width: 40%;
+    }
 }

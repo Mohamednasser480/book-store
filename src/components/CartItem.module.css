@@ -1,5 +1,4 @@
 .dataRow{
-    /*background-color: tomato;*/
     padding: 30px;
     border-bottom: 1px solid #e1e1e1;
     display: flex;
@@ -12,7 +11,7 @@
     opacity: 0.8;
 }
 .row__img{
-    height:140px;
+   width: 90px;
 }
 .row__title{
     text-decoration: none;
@@ -31,4 +30,20 @@
 .row_price{
     color:#555;
     margin:auto;
+}
+@media screen and (max-width: 620px) {
+    .dataRow{
+        font-size: 14px;
+    }
+    .row__img{
+        display: none;
+    }
+    .row__title{
+        margin-left: 0px;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .row_price{
+        font-size: 12px;
+    }
 }

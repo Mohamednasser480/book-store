@@ -25,3 +25,8 @@
     letter-spacing: 0.1em;
     font-size: 35px;
 }
+@media screen and (max-width: 768px) {
+    .title__img{
+        height: 250px;
+    }
+}
