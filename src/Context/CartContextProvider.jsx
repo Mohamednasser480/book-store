@@ -3,6 +3,8 @@ import {useEffect, useState} from "react";
 import {getItems} from '../helper/localStorageHandler';
 import data from "../data"
 import commentsData from "../comments";
+import axios from "axios";
+import {parseTheResponse} from "../helper/ResponseHandler";
 function CartContextProvider(props){
     const [cartCount, setCartCount] = useState(0);
     const [price, setPrice] = useState(0);
@@ -22,14 +24,31 @@ function CartContextProvider(props){
                     cardItemsInfo.push(itemOfData);
                     numberOfIntance += cartItem.quantity;
                     totalPrice += parseInt(cartItem.quantity)
-                            * parseInt(itemOfData.price);
+                        * parseInt(itemOfData.price);
 
                     break;
                 }
-        setCartItems(cardItemsInfo);
-        setCartCount(numberOfIntance);
-        setPrice(totalPrice);
-    },[])
+        const getApidata = async (callback)=>{
+            for(let cartItem of cartItems)
+                if(cartItem.id.length > 5 ){
+                    const  res = await axios.get(`https://www.googleapis.com/books/v1/volumes/${cartItem.id}`);
+                    let resBook = parseTheResponse(res.data);
+                    resBook.quantity = cartItem.quantity;
+                    cardItemsInfo.push(resBook);
+                    totalPrice += resBook.price;
+                    numberOfIntance += resBook.quantity;
+
+                }
+            callback();
+        }
+        getApidata( ()=>{
+            setCartItems(cardItemsInfo);
+            setCartCount(numberOfIntance);
+            setPrice(totalPrice);
+        });
+
+    },[]);
+
     let increase = (book,numOfInstance=1) => {
         const itemIndex = cartItems.findIndex((item)=>item.id === book.id);
         const newCart = [...cartItems];

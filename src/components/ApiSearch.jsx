@@ -7,6 +7,7 @@ import Button from "./UI/Button";
 import quantityBtnClasses from "./QuantityButton.module.css";
 import {useContext} from "react";
 import {CartContext} from "../Context/CreateContext";
+import {parseTheResponse,getValidBook} from "../helper/ResponseHandler"
 let isAddedItem = 1;
 let q , title;
 const ApiSearch = () => {
@@ -15,27 +16,13 @@ const ApiSearch = () => {
     const [quantity , setQuantity] = useState(1);
     const {increase} = useContext(CartContext);
     let getData = async()=>{
+        //get the response based on the book name which the user searched for
+        // then get the first book that all required data is founded {id , img , price , description , title , author}
+        // then parse the data in object
         let bookResponse = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${book}&startIndex=0`);
-        const validBook = getFirstValid(bookResponse.data.items);
-        if(validBook)
-            setbookData({
-                id:validBook.id,
-                price:validBook.saleInfo.listPrice.amount,
-                author:validBook.volumeInfo.authors[0],
-                title:validBook.volumeInfo.title,
-                img:validBook.volumeInfo.imageLinks.thumbnail,
-                description:validBook.volumeInfo.description.substr(0,500)
-            });
-        else setbookData(false);
-
-    }
-    const getFirstValid = (bookData)=>{
-        for(const book of bookData){
-            if(book.id && book.saleInfo && book.saleInfo.listPrice && book.saleInfo.listPrice.amount &&
-            book.volumeInfo && book.volumeInfo.authors && book.volumeInfo.title && book.volumeInfo.imageLinks&&
-            book.volumeInfo.imageLinks.thumbnail && book.volumeInfo.description) return book;
-        }
-        return false;
+        const validBook = getValidBook(bookResponse.data.items);
+        const pasrsedBookResponse = (validBook)? parseTheResponse(validBook):false;
+        setbookData(pasrsedBookResponse);
     }
     const handleIncreaseICon = ()=> setQuantity( (quantity)=> quantity+1);
     const handleDecreaseICon = ()=> {
@@ -47,7 +34,7 @@ const ApiSearch = () => {
         title = bookData.title;
         isAddedItem = 2;
         increase(bookData, quantity);
-        setQuantity(0);
+        setQuantity(1);
         window.scrollTo(0, 0)
     }
     useEffect(()=>{

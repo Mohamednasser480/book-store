@@ -21,6 +21,10 @@ function App() {
 
     useEffect(()=>{
          if(cartItems.length !== 0 || (cartItems.length === 0 && !initial)) {
+             // get quantity and id to add them in the local storage
+             cartItems = cartItems.map(item=> {
+                 return {"id": item.id, "quantity": item.quantity}
+             });
              setItems(cartItems);
              initial = false;
          }

@@ -13,11 +13,12 @@ function Cart(){
                  <div>
                      {cartItems.map(
                      item => <CartItem
+                         key={item.id}
+                         id = {item.id}
                          title={item.title}
                          price={item.price}
                          quantity={item.quantity}
                          img={item.img}
-                         id={item.id}
                          author={item.author}
                      />)}
                      <BasketSummary/>

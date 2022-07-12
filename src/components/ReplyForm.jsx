@@ -29,6 +29,7 @@ const ReplyForm = () => {
             setName('');
             setEmail('');
             setComment('');
+            setShow(false);
         }
     }
     return (
@@ -36,15 +37,15 @@ const ReplyForm = () => {
             {(!comment.length && show) ?
                 <div className={classes.InvalidMessage}>Write your comment!!</div> : ""
             }
-            <textarea className={`${classes.form__Message} mb-4`} placeholder={'Your Comment'} cols="30" rows="4" onChange={commentHandler}/>
+            <textarea value={comment} className={`${classes.form__Message} mb-4`} placeholder={'Your Comment'} cols="30" rows="4" onChange={commentHandler}/>
             {(!validName && show) ?
                 <div className={classes.InvalidMessage}>Enter Valid Name!!</div> : ""
             }
-            <input placeholder={'Your Name'} type="text" name="" id="" className={`mb-4`} onChange={nameHandler}/>
+            <input value ={name} placeholder={'Your Name'} type="text" name="" id="" className={`mb-4`} onChange={nameHandler}/>
             {(!validEmail && show) ?
                 <div className={classes.InvalidMessage}>Enter Valid Email!! </div> : ""
             }
-            <input placeholder={'Your Email'} type="text" name="" id="" className={`mb-4`} onChange={emailHandler}/>
+            <input value={email} placeholder={'Your Email'} type="text" name="" id="" className={`mb-4`} onChange={emailHandler}/>
             <Button className={`col-xl-2 col-md-4 ${classes.submitBtn}`} onClickhandler={submitHandler}>submit</Button>
         </div>
     );
