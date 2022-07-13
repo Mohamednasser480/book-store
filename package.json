@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "homepage": "http://Mohamednasser480.github.io/book-store-",
+  "name": "book store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,11 +19,12 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "swiper": "^8.2.4",
-    "web-vitals": "^2.1.4",
-    "yarn": "^1.22.19"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d builda",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
