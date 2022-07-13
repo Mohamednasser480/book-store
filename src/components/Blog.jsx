@@ -44,7 +44,7 @@ function Blog () {
                 </div>
                 <h1>Comments</h1>
                 {
-                 comments.map(comment => <Comment date={comment.date} commentedBy={comment.commentedBy}
+                 comments.map(comment => <Comment key={comment.id} date={comment.date} commentedBy={comment.commentedBy}
                     body={comment.body} img={comment.img}/>)
                 }
                 <h1 className={`mb-4`}>Post a Comment</h1>

@@ -86,10 +86,10 @@ function CartContextProvider(props){
         const d = new Date();
         const year = d.getFullYear();
         const day = d.getDate();
-        console.log(d,day);
         const month = d.toLocaleString('en-US', { month: 'long' });
         //  JULY 29, 2019
         comment.date = `${month} ${day}, ${year}`;
+        comment.id = comments.length + 1;
         setComments(prv => [...prv, comment]);
     }
     const getComments = ()=> comments;
