@@ -4,10 +4,9 @@
 .messageContainer{
     border:1px solid #e1e1e1;
     padding: 20px 30px;
-    margin: 80px 0px 30px 120px;
+    margin: 80px 60px 30px 120px;
     font-family:  "Cormorant Garamond",sans-serif;
     color:#555;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 19px;
@@ -58,8 +57,9 @@
     }
     .messageContainer{
         padding: 20px 10px;
-        margin: 60px 0px 15px 100px;
+        margin: 60px 10px 15px 100px;
     }
+
 }
 @media screen and (max-width: 425px) {
     .Details__title{
@@ -71,7 +71,11 @@
     }
     .messageContainer{
         padding: 10px 10px;
-        margin: 60px 10px 15px 20px;
-        font-size: 12px;
+        margin: 40px 10px 0px 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .messageContainer p {
+        margin-bottom: 15px;
     }
 }

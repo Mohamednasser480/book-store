@@ -5,11 +5,11 @@ import Button from "./UI/Button";
 import quantityBtnClasses from "./QuantityButton.module.css";
 import {useContext, useState} from "react";
 import {CartContext}  from "../Context/CreateContext";
-let isAddedItem = 1;
 let q , title;
 function Details(){
     const {increase} = useContext(CartContext);
-    const location = useLocation()
+    const location = useLocation();
+    const [isAddedItem,setIsAddedItem] = useState(false);
     const book = location.state;
     const [quantity , setQuantity] = useState(1);
     const handleIncreaseICon = ()=> setQuantity( (quantitiy)=> quantitiy+1);
@@ -20,7 +20,7 @@ function Details(){
     const addToBasket = ()=> {
         q = quantity;
         title = book.title;
-        isAddedItem = 2;
+        setIsAddedItem(true);
         increase(book, quantity);
         setQuantity(1);
         window.scrollTo(0, 0)
@@ -28,9 +28,9 @@ function Details(){
     return (
         <>
             <Title title="product" subtitle="shop list"></Title>
-            {(isAddedItem-- > 0)?
-            <div className={`${classes.messageContainer}`}>
-                <p>{` ${q}x "${title}" have been added to your basket.`}</p>
+            {(isAddedItem)?
+            <div className={`${classes.messageContainer} d-sm-block d-md-flex`}>
+                <p >{` ${q}x "${title}" have been added to your basket.`}</p>
                 <Link to={'/cart'}>
                     <Button>view basket</Button>
                 </Link>

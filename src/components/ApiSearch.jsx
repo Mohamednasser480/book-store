@@ -8,12 +8,12 @@ import quantityBtnClasses from "./QuantityButton.module.css";
 import {useContext} from "react";
 import {CartContext} from "../Context/CreateContext";
 import {parseTheResponse,getValidBook} from "../helper/ResponseHandler"
-let isAddedItem = 1;
 let q , title;
 const ApiSearch = () => {
     let {book} = useParams();
     let [bookData,setbookData] = useState('');
     const [quantity , setQuantity] = useState(1);
+    const [isAddedItem,setIsAddedItem] = useState(false);
     const {increase} = useContext(CartContext);
     let getData = async()=>{
         //get the response based on the book name which the user searched for
@@ -32,7 +32,7 @@ const ApiSearch = () => {
     const addToBasket = ()=> {
         q = quantity;
         title = bookData.title;
-        isAddedItem = 2;
+        setIsAddedItem(true);
         increase(bookData, quantity);
         setQuantity(1);
         window.scrollTo(0, 0)
@@ -44,8 +44,8 @@ const ApiSearch = () => {
     return (
         <> {(bookData)?<>
             <Title title="product" subtitle="shop list"></Title>
-            {(isAddedItem-- > 0)?
-                <div className={`col-10 ${classes.messageContainer}`}>
+            {(isAddedItem)?
+                <div className={`col-10 ${classes.messageContainer} d-sm-block d-md-flex`}>
                     <p>{` ${q}x "${title}" have been added to your basket.`}</p>
                     <Link to={'/cart'}>
                         <Button>view basket</Button>
@@ -71,7 +71,7 @@ const ApiSearch = () => {
                         <Button onClickhandler={addToBasket} className ={`mb-4 px-2 px-md-3`}>add to basket</Button>
                     </div>
                 </div>
-            </div></> : <div className={`col-10 ${classes.messageContainer}`}>
+            </div></> : <div className={`col-10 ${classes.messageContainer} d-sm-block d-md-flex`}>
             <p>{` Can not Found Result to " ${book}" `}</p>
             <Link to={'/home'}>
                 <Button>go to home</Button>

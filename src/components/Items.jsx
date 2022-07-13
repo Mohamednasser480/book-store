@@ -1,7 +1,7 @@
 import Item from './Item'
 import data from '../data'
 import {useEffect, useState} from "react";
-import classes from "./Categories.module.css";
+import classes from "./items.module.css";
 import Button from "./UI/Button";
 let category = "all";
 function Items(){

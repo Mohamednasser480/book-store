@@ -18,7 +18,9 @@ import ApiSearch from "./components/ApiSearch";
 let initial = true;
 function App() {
     let {cartItems} = useContext(CartContext );
-
+     useEffect(()=>{
+         document.title = "Book Store";
+     },[])
     useEffect(()=>{
          if(cartItems.length !== 0 || (cartItems.length === 0 && !initial)) {
              // get quantity and id to add them in the local storage

@@ -1,5 +1,5 @@
 import Button from './UI/Button'
-import classes from './Categories.module.css'
+import classes from './items.module.css'
 function Categories(){
     return (<div className={` ${classes.categoriesContainer} col-10`}>
         <Button className={classes.categoriyButton} id={"all"}>all</Button>
