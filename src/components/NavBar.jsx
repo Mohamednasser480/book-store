@@ -46,11 +46,11 @@ function CollapsibleExample() {
                                 <span className={`${classes.price} ms-2`}>$ { price.toFixed(2)}</span>
                             </div>
                         </NavLink>
-                        <Nav.Link className={`position-relative d-none d-md-block`}>
+                        <Nav.Link className={`position-relative`}>
                             <span className={`m-3 text-dark`}>|</span>
                             <i className={`fa-solid fa-magnifying-glass fs-5 ${classes.icon}`} onClick={handleSearch}>
                             </i>
-                            <div className={`${classes.container} ` + `${showSearch?'d-none d-md-flex':'d-none'}`}>
+                            <div className={`${classes.container} ` + `${showSearch?'d-flex':'d-none'}`}>
                                 <div className={`d-flex justify-content-between align-items-center ${classes.search}`}>
                                     <input type="text" placeholder={'Search'} onChange={handleInputSearch}/>
                                     <Link className={classes.go} to={`/apiSearch/${searchVal}`}>

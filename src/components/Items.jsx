@@ -13,13 +13,13 @@ function Items(){
     }
     return (
         <>
-        <div className={` ${classes.categoriesContainer} col-10`}>
-            <Button className={classes.categoriyButton} active={category==="all"} onClickhandler={handleOnclick} id={"all"}>all</Button>
-            <Button className={classes.categoriyButton} active={category==="bestSeller"} onClickhandler={handleOnclick} id={"bestSeller"}>best seller</Button>
-            <Button className={classes.categoriyButton} active={category==="fantasy"} onClickhandler={handleOnclick} id={"fantasy"}>fantasy</Button>
-            <Button className={classes.categoriyButton} active={category==="history"} onClickhandler={handleOnclick} id={"history"}>history</Button>
-            <Button className={classes.categoriyButton} active={category==="art"} onClickhandler={handleOnclick} id={"art"}>art</Button>
-            <Button className={classes.categoriyButton} active={category==="love"} onClickhandler={handleOnclick} id={"love"}>love stories</Button>
+        <div className={`my-5 d-flex justify-content-center flex-wrap`}>
+            <Button className={`${classes.categoryButton} mx-5 mx-md-3`} active={category==="all"} onClickhandler={handleOnclick} id={"all"}>all</Button>
+            <Button className={`${classes.categoryButton} mx-5 mx-md-3`} active={category==="bestSeller"} onClickhandler={handleOnclick} id={"bestSeller"}>best seller</Button>
+            <Button className={`${classes.categoryButton} mx-5 mx-md-3`} active={category==="fantasy"} onClickhandler={handleOnclick} id={"fantasy"}>fantasy</Button>
+            <Button className={`${classes.categoryButton} mx-5 mx-md-3`} active={category==="history"} onClickhandler={handleOnclick} id={"history"}>history</Button>
+            <Button className={`${classes.categoryButton} mx-5 mx-md-3`} active={category==="art"} onClickhandler={handleOnclick} id={"art"}>art</Button>
+            <Button className={`${classes.categoryButton} mx-5 mx-md-3`} active={category==="love"} onClickhandler={handleOnclick} id={"love"}>love stories</Button>
         </div>
         <div className={`container`}>
             <div className={`row`}>

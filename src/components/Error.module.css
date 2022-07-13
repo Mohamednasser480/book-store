@@ -29,3 +29,14 @@
     color: #e1e1e1;
     transition: all 0.4s;
 }
+@media screen and (max-width: 425px) {
+    .error h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    .error p{
+        margin: 10px 0px 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+}

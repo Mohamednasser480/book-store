@@ -36,6 +36,7 @@ function App() {
           <NavBar/>
           <Routes>
               <Route path="/" element={<Home/>}/>
+              <Route path="/book-store" element={<Home/>}/>
              <Route path="/home" element={<Home/>}/>
              <Route path="/blog" element={<Blog/>}/>
             <Route path="/event" element={<Event/>}></Route>

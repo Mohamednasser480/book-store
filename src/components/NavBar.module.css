@@ -88,3 +88,9 @@
 .search input:focus::placeholder{
     color:#fff;
 }
+@media screen and (max-width: 425px) {
+    .container{
+        top:50px;
+        right:-20px;
+    }
+}
